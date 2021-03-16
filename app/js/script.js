@@ -1,16 +1,24 @@
 
 const btnHumberger = document.querySelector('#btnHumberger');
+const body = document.querySelector('body');
 const header = document.querySelector('.header');
 const overlay = document.querySelector('.overlay');
+const fadeElements = document.querySelectorAll('.has-fade');
 btnHumberger.addEventListener('click',function(){
     if(header.classList.contains('open')){
-        overlay.classList.add('fade-out');
-        overlay.classList.remove('fade-in');
+        body.classList.remove('noscroll');
         header.classList.remove('open');
+        fadeElements.forEach(function(element){
+            element.classList.remove('fade-in');
+            element.classList.add('fade-out');
+        })
     }
     else {
-        overlay.classList.add('fade-in');
-        overlay.classList.remove('fade-out');
+        body.classList.add('noscroll');
         header.classList.add('open');
+        fadeElements.forEach(function(element){
+            element.classList.remove('fade-out');
+            element.classList.add('fade-in');
+        })
     }
 })
