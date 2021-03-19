@@ -54,3 +54,17 @@
     width: 60rem;
 }
 
+.site-main .about-area {
+    padding: 8rem 5rem;
+}
+
+.site-main .about-area .about-title h2 > span {
+    display: block;
+    font: normal bold 30px/40px var(--roboto);
+    letter-spacing: 12px;
+}
+
+.site-main .about-area .about-title .paragraph > p {
+    padding: .2rem 0;
+}
+
