@@ -33,6 +33,17 @@ p.para {
 
 .font-roboto {
     font-family: var(--roboto);
-    text-decoration: none;
+}
 
+button:focus,
+button:active
+button:hover
+.btn:active,
+.btn.active{
+    outline: 0px !important;
+    box-shadow: none !important;
+}
+
+.title-h1 {
+    font: normal bold 35px/40px var(--roboto);
 }
